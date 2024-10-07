@@ -1,6 +1,8 @@
 import { Type } from "@sinclair/typebox";
 import { DiscriminatedUnionValidator } from "typebox-validators/discriminated";
 
+// WARNING: the typebox-validators library is not maintained
+
 export const LinkSchema = Type.Object({
   type: Type.Literal("link"),
   url: Type.String(),
