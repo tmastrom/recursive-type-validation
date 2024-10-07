@@ -1,5 +1,11 @@
 import { type Static, Type } from "@sinclair/typebox";
 
+/**
+ * This works but see the tests for the pitfalls.
+ * For full validation, you need to recursively iterate over the children
+ * and check with the correct "type" schema
+ */
+
 export const LinkType = Type.Object({
   type: Type.Literal("link"),
   url: Type.String(),
