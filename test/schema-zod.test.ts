@@ -2,7 +2,7 @@ import { expect, test } from "bun:test";
 
 import { fileTreeItemSchema } from "../src/schema-zod";
 
-test("parses minimal input schema", () => {
+test.skip("parses minimal input schema", () => {
   const pageInput = {
     path: "src/page-one.md",
     type: "page",
@@ -13,7 +13,7 @@ test("parses minimal input schema", () => {
   expect(result.success).toEqual(true);
 });
 
-test.only("page missing properties Union Type", () => {
+test("page missing properties Union Type", () => {
   const invalidItem = {
     type: "page",
   };

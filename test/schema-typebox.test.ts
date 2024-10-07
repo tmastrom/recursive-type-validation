@@ -66,16 +66,19 @@ test("throws errors in nested children schemas with missing properties", () => {
   expect(result).toEqual(false);
 });
 
-test("page missing properties Union Type", () => {
+test("page missing properties FileTreeType", () => {
   const invalidItem = {
     type: "page",
+    // path: string
   };
   const resultInvalid = Value.Check(FileTreeType, invalidItem);
   expect(resultInvalid).toEqual(false);
 });
-test("page missing properties Recursive Composite Type", () => {
+
+test("page missing properties FileTreeItemType", () => {
   const invalidItem = {
     type: "page",
+    // path: string
   };
   const resultInvalid = Value.Check(FileTreeItemType, invalidItem);
   expect(resultInvalid).toEqual(false);
