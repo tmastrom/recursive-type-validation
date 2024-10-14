@@ -8,20 +8,9 @@ test.only("page missing properties FileTreeType", () => {
     // path: string
   };
 
-  // throws exception with message "Invalid value" and the single error
-  //  "Unknown type" for path "":
+  // throws exception with message "Invalid value"
   validator.assert(invalidItem);
-});
 
-test("page missing properties FileTreeItemType", () => {
-  const invalidItem = {
-    type: "page",
-    // path: string
-  };
-});
-
-test("throws errors for missing type property", () => {
-  const invalidItem = {
-    url: "example.com",
-  };
+  // Error is not descriptive
+  // ✗ page missing properties FileTreeType
 });
